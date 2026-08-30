@@ -42,3 +42,98 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.hero-product {
+  position: absolute;
+  width: 125%;
+  max-width: none;
+  object-fit: contain;
+
+  opacity: 0;
+
+  filter: drop-shadow(
+    0 35px 28px rgba(0, 0, 0, 0.28)
+  );
+
+  animation: heroProductCycle 15s infinite;
+}
+
+.hero-product-1 {
+  animation-delay: 0s;
+}
+
+.hero-product-2 {
+  animation-delay: 3s;
+}
+
+.hero-product-3 {
+  animation-delay: 6s;
+}
+
+.hero-product-4 {
+  animation-delay: 9s;
+}
+
+.hero-product-5 {
+  animation-delay: 12s;
+}
+
+@keyframes heroProductCycle {
+
+  0% {
+    opacity: 0;
+    transform:
+      translateX(60px)
+      scale(0.88)
+      rotate(-9deg);
+  }
+
+  5% {
+    opacity: 1;
+    transform:
+      translateX(0)
+      scale(1)
+      rotate(-4deg);
+  }
+
+  16% {
+    opacity: 1;
+    transform:
+      translateX(0)
+      scale(1)
+      rotate(-4deg);
+  }
+
+  20% {
+    opacity: 0;
+    transform:
+      translateX(-45px)
+      scale(0.94)
+      rotate(2deg);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .hero-product {
+    width: 110%;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-product {
+    animation: none;
+    opacity: 0;
+  }
+
+  .hero-product-1 {
+    opacity: 1;
+    transform: rotate(-4deg);
+  }
+
+}
