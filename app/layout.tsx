@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   ],
 
   applicationName: "Bird Roti",
+  icons: {
+    icon: "/logos/bird-roti-symbol.svg",
+    shortcut: "/logos/bird-roti-symbol.svg",
+    apple: "/logos/bird-roti-symbol.svg",
+  },
 
   authors: [
     {
